@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking UI</title>
+  <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#" >Movies</a>
+      <a href="#">Payment</a>
+      <a href="#">History</a>
+    </div>
+    <div class="nav-right">
+      <input type="text" placeholder="Search...">
+    </div>
+  </nav>
+
+  <!-- Movie Listing (Page: Search & Select Movie1) -->
+  <section class="movie-listing">
+    <div class="filter-bar">
+      <span>Sorted by your choice:</span>
+      <button class="tag">Adventure</button>
+    </div>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="ne_zha2.jpg" alt="NE ZHA 2">
+        <p>NE ZHA 2</p>
+      </div>
+      <div class="movie-card">
+        <img src="/image/snow_white.jpg" alt="Snow White">
+        <p>SNOW WHITE</p>
+      </div>
+      <div class="movie-card">
+        <img src="minecraft.jpg" alt="Minecraft">
+        <p>A MINECRAFT MOVIE</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie Detail (Page: Search & Select Movie2) -->
+  <section class="movie-detail">
+    <div class="detail-header">
+      <img src="snow_white.jpg" alt="Snow White">
+      <div class="info">
+        <h2>SNOW WHITE</h2>
+        <p>Adventure, Drama</p>
+        <p>106 mins</p>
+        <button class="btn">See Showtime</button>
+      </div>
+    </div>
+    <div class="trailer">
+      <img src="trailer.jpg" alt="Official Trailer">
+    </div>
+  </section>
+
+  <!-- Showtime Selection (Page: Show time-1) -->
+  <section class="showtime">
+    <div class="movie-summary">
+      <img src="snow_white.jpg" alt="Snow White">
+      <div>
+        <h3>20 March 2025</h3>
+        <h2>SNOW WHITE</h2>
+        <p>Adventure, Drama | 106 mins</p>
+        <button class="btn">See Detail</button>
+      </div>
+    </div>
+    <div class="date-picker">
+      <button>29</button>
+      <button>30</button>
+      <button>31</button>
+      <button>01</button>
+      <button>02</button>
+      <button>03</button>
+    </div>
+    <div class="location">
+      <img src="major_logo.png" alt="Major">
+      <span>Theatre#1 | 2D | NONE</span>
+      <div class="times">
+        <button>13:00</button>
+        <button>16:00</button>
+        <button>19:00</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

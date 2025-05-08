@@ -72,4 +72,38 @@ body {
     color: black;
     width: auto;
   }
-  
+   .space {
+    padding: auto;
+   }
+
+   /* styles.css */
+
+/* กำหนดพื้นฐานสำหรับ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* กำหนดสีของลิงก์ใน nav-left */
+.nav-left a {
+  color: white;  /* กำหนดให้ลิงก์มีสีขาว */
+  text-decoration: none;  /* เอาขีดเส้นใต้ของลิงก์ออก */
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* สีลิงก์เมื่อมีการ hover */
+.nav-left a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* สำหรับการตั้งค่าลิงก์แบบพิเศษ */
+.nav-left a.movies {
+  color: aliceblue;  /* กำหนดสีเป็น aliceblue สำหรับลิงก์ Movies */
+}

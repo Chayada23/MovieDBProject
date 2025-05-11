@@ -6,42 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie List Page</title>
   <!-- วางไว้ใน <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="/CSS/movielist.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/movielist.css">
 </head>
 <body>
   
   <!--ไอคอนรูปคน  ไอคอนล็อกเอ้าท์ -->
-
-
-<div class="logout-icon" onclick="toggleMenu()">
-  <i class="fas fa-user-circle"></i>
+ <nav>
+    <div class="nav-left">
+      <a href="movielist.html">Movies</a>
+      <a href="#">Payment</a>
+      <a href="#">History</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
 
   <div id="profile-menu" class="profile-dropdown">
    <a href="#">Profile</a>
     <a href="login.html">Logout</a>
-</div>
-</div>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="link-text">
-      <a href="movielist.html" style="color: #5736B9;">Movies</a>
-      <a href="#">Payment</a>
-      <a href="#">History</a>
    </div>
-    
-    
-    <div class="search-container">
-      <div class="search-box-wrapper">
-        <input type="text" class="search-box" >
-        <i class="fas fa-search search-icon"></i>
-      
-      </div>
-    </div>
-  </nav>
-    
-
+</div>
+        
      <!-- หมวด Now Showing / Coming Soon -->
 <div class="tab-bar">
   <div class="tab active">Now Showing</div>
@@ -75,21 +68,21 @@
 <!-- รายชื่อภาพยนตร์ -->
 <div class="movie-grid">
   <div class="movie-card" data-category="Adventure">
-    <img src="/image/ne-zha-2.jpg" alt="Ne Zha 2">
+    <img src="image/ne-zha-2.jpg" alt="Ne Zha 2">
     <div class="title">NE ZHA 2</div>
   </div>
 
   <div class="movie-card" data-category="Adventure">
-    <img src="/image/snow-white.jpg" alt="Snow White">
+    <img src="image/snow-white.jpg" alt="Snow White">
     <div class="title">SNOW WHITE</div>
   </div>
 
   <div class="movie-card" data-category="Adventure">
-    <img src="/image/minecraft.jpg" alt="Minecraft Movie">
+    <img src="image/minecraft.jpg" alt="Minecraft Movie">
     <div class="title">A MINECRAFT MOVIE</div>
   </div>
 
 </div>
-<script src="/js/movielist.js"></script>
+<script src="js/movielist.js"></script>
 </body>
 </html>

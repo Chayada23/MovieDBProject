@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose a payment gateway</title>
+  <link rel="stylesheet" href="CSS/selectpay.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="JS/selectpay.js"></script>
+  <!--ไอคอนรูปคน  ไอคอนล็อกเอ้าท์ -->
+ <nav>
+    <div class="nav-left">
+      <a href="#">Movies</a>
+      <a href="selectpay.html">Payment</a>
+      <a href="#">History</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="profile-menu" class="profile-dropdown">
+   <a href="#">Profile</a>
+    <a href="login.html">Logout</a>
+   </div>
+</div>
+
+  <div class="header">Choose a payment gateway</div>
+
+<div class="payment-options">
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="image/visa.png" alt="Visa" />
+    </div>
+    <span class="label">VisaCreditcard</span>
+  </div>
+
+  <div class="payment-item">
+    <div class="icon-box">
+      <img  src="image/mtc.png" alt="MasterCard" />
+    </div>
+    <span class="label">MasterCard</span>
+  </div>
+
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="image/tmn.png" alt="TrueMoney Wallet" />
+    </div>
+    <span class="label">True Money Wallet</span>
+  </div>
+
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="image/prompay.png" alt="Promptpay" />
+    </div>
+    <span class="label">Promptpay</span>
+  </div>
+
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="image/mobile-banking_1_1.png" alt="Mobile Banking" />
+    </div>
+    <span class="label">Mobile banking</span>
+  </div>
+</div>
+
+  <div class="summary-row">
+          <span class="summary-text">Summary Transaction</span>
+          <span class="summary-price">฿240.00</span>
+  </div>
+
+ <div class="btn-container">
+  <button class="pay-btn" disabled>Pay Now</button>
+
+ </div>
+
+
+
+</body>

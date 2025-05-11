@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transaction Summary</title>
+  <link rel="stylesheet" href="CSS/Booking1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="JS/Booking.js"></script>
+  <nav>
+    <div class="nav-left">
+      <a href="movielist.html">Movies</a>
+      <a href="#">Payment</a>
+      <a href="#">History</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="profile-menu" class="profile-dropdown">
+    <a href="#">Profile</a>
+    <a href="login.html">Logout</a>
+  </div>
+
+  <div class="header">Transaction Summary</div>
+
+  <div class="content">
+    <div class="left">
+      <div class="section">
+        <div class="quantity-row">
+          <span class="Quoatity">Quantity</span>
+          <span class="SeatN">1 Seats</span>
+        </div>
+        <div class="seat-info">
+          <div class="seat-color"></div>
+          <div>
+            <div class="seat-row">
+              <span class="seat-type">Normal</span>
+              <span class="price">฿240.00</span>
+            </div>
+            <div class="seat-position">C8</div>
+          </div>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-text">Summary Transaction</span>
+          <span class="summary-price">฿240.00</span>
+        </div>
+      </div>
+
+      <div class="order-section">
+        <h3>Order Confirmation</h3>
+        <div class="inputs">
+          <div class="input-wrapper">
+            <input type="tel" id="mobile" placeholder="Mobile" maxlength="10" />
+            <div id="mobileError" class="error-message"></div>
+          </div>
+          <div class="input-wrapper">
+            <input type="email" id="email" placeholder="Email" />
+            <div id="emailError" class="error-message"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="timer">Time Remaining: <span style="color:red">09:59</span></div>
+
+      <div class="movie-row">
+        <div class="movie-image">
+          <img src="image/snow-white.jpg" alt="Snow White" />
+        </div>
+
+        <div class="movie-info-text">
+          <h4>SNOW WHITE</h4>
+          <div class="lang">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>TH/--
+          </div>
+          <div class="duration">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> 106 mins
+          </div>
+        </div>
+      </div>
+
+      <h4 class="showtime-label">Showtime</h4>
+
+      <div class="theatre">
+        <p>Major Cineplex Future Park Rangsit<br></p>
+        <span style="color: #5736B9;">29 Mar 2025</span>
+      </div>
+
+      <div class="showtime-row">
+        <span class="theatre-name">Theatre1</span>
+        <span class="showtime-time">19:00</span>
+      </div>
+
+      <button class="pay-btn" id="payBtn">PAYMENT</button>
+    </div>
+  </div>
+</body>
+</html>

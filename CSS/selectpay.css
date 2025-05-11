@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a08;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 0.5%;
+  
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.67vw;
+  font-weight: 600;
+  font-size: 1.5vw;
+  gap: 5vw;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-right: -2%;
+}
+
+.nav-left {
+  display: flex;
+  gap: 5vw;
+  padding-left: 25%; /* หรือมากกว่านี้ตามต้องการ */
+  margin-top: 4%;
+}
+
+.search-box {
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0.3vw 1vw;
+  margin-top: 20%;
+  margin-right: -15%;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 1.3vw;
+}
+
+.search-box i {
+  color: #5736B9;
+  font-size: 1.2vw;
+}
+
+.avatar {
+  margin-top: -5%;
+  font-size: 250%;
+  cursor: pointer;
+}
+
+.avatar:hover{
+  color: #5736B9;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 3.13vw;
+  right: 1.04vw;
+  background-color: #1e1e1e;
+  border: 0.05vw solid #444;
+  border-radius: 0.52vw;
+  display: none;
+  flex-direction: column;
+  min-width: 7.81vw;
+  box-shadow: 0 0.21vw 0.52vw rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 0.625vw 0.83vw;
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.05vw solid #333;
+  transition: background 0.3s;
+}
+
+.profile-dropdown a:hover {
+  background-color: #5736B9;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.header {
+  background-color: #5f2dcf;
+  text-align: center;
+  padding: 1%;
+  font-weight: bold;
+  font-size: 170%;
+}
+
+  .payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    margin-top: 5.66vw;
+  }
+
+  .payment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-box {
+    background-color: #dcdcdc;
+    border-radius: 0.83vw;
+    padding: 0.83vw;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .icon-box img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .label {
+    margin-top: 0.66vw;
+    color: white;
+    font-size: 0.79vw;
+    text-align: center;
+  }
+
+
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbd233;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1vw;
+  padding: 1vw;
+  margin-top: 6vw;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 6vw;
+}
+
+.pay-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ให้ข้อความอยู่กลางปุ่ม */
+  background-color: #dcdcdc;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  width: 25vw;
+  cursor: pointer;
+}
+
+.payment-item.selected .icon-box {
+  border: 0.3vw solid #5736b9;
+  background-color: #fbd233;
+  box-shadow: 0 0 0.5vw #fbd233;
+}
+
+.payment-item.selected .label {
+  color: #fbd233;
+  font-weight: bold;
+}
+
+.pay-btn:disabled {
+  background-color: #dcdcdc;
+  color: black;
+  cursor: not-allowed;
+}
+
+.pay-btn.enabled {
+  background-color: #fbd233;
+  color: black;
+  cursor: pointer;
+}
+
+/* Active nav link */
+.nav-left a.active {
+  color: #5736b9;
+ 
+}
+

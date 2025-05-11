@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transaction Summary</title>
+  <link rel="stylesheet" href="CSS/paymentVerify.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="JS/paymentVerify.js"></script>
+ <!--ไอคอนรูปคน  ไอคอนล็อกเอ้าท์ -->
+ <nav>
+    <div class="nav-left">
+      <a href="#">Movies</a>
+      <a href="paymentVerify.html">Payment</a>
+      <a href="#">History</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="profile-menu" class="profile-dropdown">
+   <a href="#">Profile</a>
+    <a href="login.html">Logout</a>
+   </div>
+
+  
+<div class="payment-row">
+  <div class="payment-item">
+    <div class="icon-box">
+      <img src="image/tmn.png" alt="TrueMoney Wallet" />
+    </div>
+    <span class="label">True Money Wallet</span>
+  </div>
+
+  <div class="verify-container">
+    <label for="phone">Enter your phone number</label>
+
+  <div class="phone-row">
+    <div class="input-wrapper">
+      <input type="tel" id="phone" maxlength="10" />
+      <span class="error-message" id="phoneError"></span>
+    </div>
+      <button id="sendCodeBtn" disabled>SEND CODE</button>
+  </div>
+
+
+
+
+
+    <label for="otp">OTP</label>
+    <input type="text" id="otp" maxlength="6" disabled />
+  </div>
+</div>
+
+
+
+  <div class="summary-row">
+          <span class="summary-text">Summary Transaction</span>
+          <span class="summary-price">฿240.00</span>
+  </div>
+
+ <div class="btn-container">
+  <button class="pay-btn" disabled>Pay Now</button>
+
+  <!-- POPUP -->
+<div class="popup-overlay" id="successPopup">
+  <div class="popup-box">
+    <div class="popup-icon">✔️</div>
+    <h2>Payment Successful</h2>
+    <p>Congratulations!<br>Your payment has been confirmed.</p>
+    <button class="btn check-order" onclick="window.location.href='History.html'">Check Order</button>
+    <button class="btn back-home" onclick="window.location.href='movielist.html'">Back to Home</button>
+  </div>
+</div>
+
+
+ </div>
+</body>

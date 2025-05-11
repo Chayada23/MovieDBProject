@@ -76,4 +76,17 @@ tabs.forEach(tab => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll(".nav-left a");
+  const currentPage = window.location.pathname.split("/").pop() || "movielist.html";
+
+  navLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
 

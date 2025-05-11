@@ -1,0 +1,291 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a08;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 0.5%;
+}
+
+.nav-left {
+  display: flex;
+  gap: 5vw;
+  padding-left: 25%;
+  margin-top: 4%;
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5vw;
+}
+
+.nav-left a.active {
+  color: #5736b9;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-right: -2%;
+}
+
+.search-box {
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0.3vw 1vw;
+  margin-top: 20%;
+  margin-right: -15%;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 1.3vw;
+}
+
+.search-box i {
+  color: #5736B9;
+  font-size: 1.2vw;
+}
+
+.avatar {
+  margin-top: -5%;
+  font-size: 250%;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  color: #5736B9;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 3.13vw;
+  right: 1.04vw;
+  background-color: #1e1e1e;
+  border: 0.05vw solid #444;
+  border-radius: 0.52vw;
+  display: none;
+  flex-direction: column;
+  min-width: 7.81vw;
+  box-shadow: 0 0.21vw 0.52vw rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 0.625vw 0.83vw;
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.05vw solid #333;
+  transition: background 0.3s;
+}
+
+.profile-dropdown a:hover {
+  background-color: #5736B9;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+/* Header */
+.header {
+  background-color: #5f2dcf;
+  text-align: center;
+  padding: 1%;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+/* Ticket Section */
+.ticket-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2vw;
+  margin: 2vw;
+  border-radius: 1vw;
+  color: white;
+}
+
+.ticket-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2vw;
+  flex: 3;
+}
+
+
+.ticket-left {
+  flex: 1;
+}
+
+.ticket-img {
+  width: 13vw;
+  border-radius: 0.5vw;
+}
+
+.ticket-details {
+  flex: 2;
+  font-size: 1vw;
+  line-height: 1.6;
+  padding-left: 2vw;
+}
+
+.ticket-qr {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.qr-img {
+  width: 13vw;
+  height: 13vw;
+  background-color: white;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+.ticket-details .label {
+  font-size: 0.8vw;
+  color: white;
+  font-weight: 500;
+  margin-top: 0.5vw;
+}
+
+.ticket-details .value {
+  font-size: 0.8vw;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0vw;
+}
+
+/* Cinema / Theatre */
+.ticket-cinema {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Price */
+.ticket-price .value {
+  color: #FEA837;
+}
+
+/* Date / Time */
+.ticket-datetime .value,
+.ticket-lang-duration .value {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  flex-wrap: wrap;
+}
+
+/* Ticket Info Rows */
+
+
+.ticket-qr {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 👈 จัดแนว vertical */
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.ticket-purchase-date {
+  margin-top: 1.2vw;
+  text-align: center;
+}
+
+.ticket-purchase-date .label {
+  font-size: 1vw;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.3vw;
+}
+
+.ticket-purchase-date .value {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.qr-popup {
+  display: none; /* ซ่อนก่อน */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #1e1e1e;
+  border: 0.3vw solid #5f2dcf;
+  border-radius: 1vw;
+  padding: 2vw;
+  text-align: center;
+  position: relative;
+}
+
+.popup-qr-img {
+  width: 40vw;
+  max-width: 300px;
+  border-radius: 0.5vw;
+}
+
+.close-popup {
+  position: absolute;
+  top: -1.5vw;      /* เลื่อนขึ้นมานอกกรอบ popup */
+  right: -1.5vw;    /* เลื่อนออกไปทางขวานอกกรอบ */
+  font-size: 2vw;
+  background-color: #5f2dcf;
+  border-radius: 50%;
+  width: 2.8vw;
+  height: 2.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 0.3vw rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.close-popup:hover {
+  transform: scale(1.2);
+  background-color: #b30000;
+}
+
+
+
+.popup-label {
+  color: white;
+  font-size: 1.5vw;
+  margin-top: 1vw;
+  font-weight: 600;
+}
+

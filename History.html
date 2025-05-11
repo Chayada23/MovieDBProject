@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Choose a payment gateway</title>
-  <link rel="stylesheet" href="CSS/selectpay.css" />
+  <link rel="stylesheet" href="CSS/History.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <script src="JS/selectpay.js"></script>
-  <!--ไอคอนรูปคน  ไอคอนล็อกเอ้าท์ -->
- <nav>
+  <script src="JS/History.js"></script>
+
+  <nav>
     <div class="nav-left">
-      <a href="movielist.html">Movies</a>
+      <a href="#">Movies</a>
       <a href="#">Payment</a>
-      <a href="#">History</a>
+      <a href="History.html">History</a>
     </div>
     <div class="nav-right">
       <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
+        <input type="text" placeholder="Search..." />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
       <div class="avatar" onclick="toggleMenu()">
         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
       </div>
@@ -29,60 +29,91 @@
   </nav>
 
   <div id="profile-menu" class="profile-dropdown">
-   <a href="#">Profile</a>
+    <a href="#">Profile</a>
     <a href="login.html">Logout</a>
-   </div>
+  </div>
+
+  <div class="header">Ticket History</div>
+  
+  <div class="ticket-container">
+  <div class="ticket-left">
+    <img src="image/snow-white.jpg" alt="Snow White" class="ticket-img">
+  </div>
+
+  <div class="ticket-main">
+    <div class="ticket-details">
+      <h2 class="movie-title">SNOW WHITE</h2>
+
+      <div class="ticket-location">
+        <div class="value ticket-cinema">Major Cineplex Future Park Rangsit</div>
+        <div class="value ticket-theatre">Theatre1</div>
+      </div>
+
+      <div class="ticket-lang-duration">
+        <div class="label">Language / Duration</div>
+        <div class="value">
+          <i class="fa fa-volume-up"></i> <span class="ticket-language">TH/--</span> &nbsp;
+          <i class="fa fa-clock-o"></i> <span class="ticket-duration">106 mins</span>
+        </div>
+      </div>
+
+      <div class="ticket-datetime">
+        <div class="label">Date & Time</div>
+        <div class="value">
+          <i class="fa fa-calendar"></i> <span class="ticket-date">29 Mar 2025</span> &nbsp;
+          <i class="fa fa-clock-o"></i> <span class="ticket-time">19.00</span>
+        </div>
+      </div>
+
+      <div class="ticket-price">
+        <div class="label">Price</div>
+        <div class="value ticket-price" style="color: #FEA837;"><b>240 THB</b></div>
+      </div>
+
+      <div class="ticket-info">
+        <div class="ticket-row">
+          <div class="label">Number of seats</div>
+          <div class="value ticket-seats" style="color: #FEA837;">C8</div>
+        </div>
+        <div class="ticket-row">
+          <div class="label">Booking Number</div>
+          <div class="value ticket-booking-number" style="color: #FEA837;">1234567</div>
+        </div>
+        <div class="ticket-row">
+          <div class="label">Purchase order</div>
+          <div class="value ticket-purchase-order" style="color: #FEA837;">
+            <span class="copy-text">D999999999</span>
+            <i class="fa fa-clone copy-icon" aria-hidden="true" style="cursor: pointer;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket-qr">
+      <img src="image/qr.png" alt="QR Code" class="qr-img">
+      <div class="ticket-purchase-date">
+        <div class="label">Ticket purchase date</div>
+        <div class="value" style="color: #FEA837;">29 Mar 2025</div>
+      </div>
+    </div>
+  </div> <!-- end .ticket-main -->
 </div>
 
-  <div class="header">Choose a payment gateway</div>
 
-<div class="payment-options">
-  <div class="payment-item">
-    <div class="icon-box">
-      <img src="image/visa.png" alt="Visa" />
-    </div>
-    <span class="label">VisaCreditcard</span>
-  </div>
 
-  <div class="payment-item">
-    <div class="icon-box">
-      <img  src="image/mtc.png" alt="MasterCard" />
-    </div>
-    <span class="label">MasterCard</span>
-  </div>
+  <hr style="margin-top: 2vw; border: 0.5px solid #444;">
 
-  <div class="payment-item">
-    <div class="icon-box">
-      <img src="image/tmn.png" alt="TrueMoney Wallet" />
-    </div>
-    <span class="label">True Money Wallet</span>
-  </div>
-
-  <div class="payment-item">
-    <div class="icon-box">
-      <img src="image/prompay.png" alt="Promptpay" />
-    </div>
-    <span class="label">Promptpay</span>
-  </div>
-
-  <div class="payment-item">
-    <div class="icon-box">
-      <img src="image/mobile-banking_1_1.png" alt="Mobile Banking" />
-    </div>
-    <span class="label">Mobile banking</span>
+  <!-- Popup Container -->
+<div id="qr-popup" class="qr-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <img src="image/qr.png" alt="QR Code" class="popup-qr-img">
+      <div class="popup-label" style="color: #FEA837;">
+        <span class="copy-text">D999999999</span>
+        <i class="fa fa-clone copy-icon" aria-hidden="true" style="cursor: pointer;"></i>
+      </div>
   </div>
 </div>
-
-  <div class="summary-row">
-          <span class="summary-text">Summary Transaction</span>
-          <span class="summary-price">฿240.00</span>
-  </div>
-
- <div class="btn-container">
-  <button class="pay-btn" disabled>Pay Now</button>
-
- </div>
-
-
 
 </body>
+</html>

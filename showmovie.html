@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS/showmovie.css" />
+</head>
+<body>
+    <div class="logout-icon" onclick="toggleMenu()">
+  <i class="fas fa-user-circle"></i>
+
+  <div id="profile-menu" class="profile-dropdown">
+   <a href="profile.html">Profile</a>
+    <a href="login.html">Logout</a>
+</div>
+</div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="link-text">
+      <a href="movielist.html" >Movies</a>
+      <a href="#">Payment</a>
+      <a href="#">History</a>
+   </div>
+    
+    
+    <div class="search-container">
+      <div class="search-box-wrapper">
+        <input type="text" placeholder="Search..." class="search-box" >
+        <i class="fas fa-search search-icon"></i>
+      
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="left-column">
+      <img src="image/snow-white.jpg" alt="Snow White Poster" class="movie-poster" />
+    </div>
+
+    <div class="center-column">
+      <!-- Date today -->
+        <span id="today-date"></span> 
+      <h1>SNOW WHITE</h1>
+      
+      <div class="tags">
+        <p><span class="tag">Adventure</span> <span class="tag">Drama </span></p>
+       <br> <span class="tag">PG</span>
+        <span class="tag">⏱ 106 mins</span>
+        <span class="tag">2D</span>
+      </div>
+      
+      <button class="showtime-btn">See Showtimes</button>
+    </div>
+
+    <div class="right-column">
+      <img src="image/snow-white.jpg" alt="Snow White Trailer" class="trailer-img" />
+    </div>
+  </main>
+ <script src="JS/showmovie.js"></script>
+</body>
+</html>

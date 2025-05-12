@@ -2,10 +2,6 @@
   ฟังก์ชัน toggleMenu()
   ใช้เปิด/ปิดเมนูโปรไฟล์เมื่อคลิกที่ไอคอน
 */
-function toggleMenu() {
-  const menu = document.getElementById("profile-menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
 
 function toggleMenu() {
   const menu = document.getElementById("profile-menu");
@@ -75,18 +71,5 @@ tabs.forEach(tab => {
     tab.classList.add('active');
   });
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll(".nav-left a");
-  const currentPage = window.location.pathname.split("/").pop() || "movielist.html";
-
-  navLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-});
-
 
 

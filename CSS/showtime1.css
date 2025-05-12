@@ -1,0 +1,251 @@
+body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0b0b0b;
+      color: white;
+    }
+   .container {
+  padding: 10px;
+  width: 90%;         /* ให้กว้างเต็มพื้นที่ที่มี */
+  max-width: 1200px;   /* หรือค่าที่คุณต้องการให้กว้างสุด */
+  margin: auto;        /* จัดตำแหน่งให้อยู่กลาง */
+}
+    .movie-info {
+      display: flex;
+      gap: 20px;
+    }
+    .poster {
+      width: 150px;
+      border-radius: 10px;
+    }
+    .details h2 {
+      margin: 5px 0;
+    }
+    
+/* สีเมื่อเลือกแล้ว */
+    .date-box {
+  padding: 15px 20px;
+  background-color: #ccc;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*เมื่อวันที่ วันนั้นถูกเลือก*/
+.date-box.selected {
+  background-color: #FFD563;
+  color: white;
+  font-weight: bold;
+}
+    
+.showtimes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: nowrap; /* ป้องกันการย้ายบรรทัด */
+  width: fit-content;
+}
+
+.time-box {
+  padding: 15px 20px;
+  background-color: #ccc;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* ทำให้เป็นบล็อคๆ */
+    .dates, .showtimes {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      gap: 40px; /* ลดระยะห่างระหว่างปุ่มหรือตัวเลือก */
+    }
+
+
+
+.time-box.selected {
+  background-color: #FFD563;
+  color: black;
+  font-weight: bold;
+}
+
+.showtimes button {
+  flex: 0 0 30%;         /* กำหนดให้แต่ละปุ่มมีความกว้าง 30% ของพื้นที่ */
+  padding: 10px 20px;
+  border: none;
+  background-color: #d9d9d9;
+  color: black;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+    
+    .cinema-info {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px; /* ปรับช่องว่างระหว่าง logo-box กับ cinema-detail */
+  align-items: flex-start; /* ให้เนื้อหาชิดด้านบน */
+}
+
+.logo-box {
+  background-color: #D9D9D9;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 6vw;
+}
+
+.cinema-logo {
+      width: 60px;
+    }
+
+.cinema-detail {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0;           /* ลบ margin ภายใน */
+  padding: 0;          /* ลบ padding ภายใน */
+}
+
+
+    
+    .tag {
+      display: inline-block;
+      margin-right: 5px;
+      background: #333;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    /*กดแล้วจะเปลี่ยนสีวันที่*/
+    .date-box.selected {
+        background-color: #FFD563;
+        font-weight: bold;
+        color: black;
+    }
+
+   .logout-icon {
+  position: absolute;
+  top: 20px; /* ห่างจากขอบบน 20px */
+  right: 20px; /* ห่างจากขอบขวา 20px */
+  font-size: 30px; /* ขนาดไอคอน */
+  color: white; /* สีของไอคอน */
+  cursor: pointer; /* แสดง cursor เป็นมือเมื่อ hover */
+}
+
+.logout-icon:hover {
+  color: #5736B9; /* สีไอคอนเมื่อ hover */
+}
+
+
+/*  */
+.navbar {
+  justify-content: space-between; /* จัดให้อีกกล่องไปทางขวา */
+  width: 100%;
+  display: flex;
+  margin-left: 20px; /* จัดตำแหน่งลิงก์และกล่องค้นหาขวา-ซ้าย */
+  align-items: center; /* ทำให้แนวตั้งตรงกัน */
+  padding: 40px 40px; /* เว้นระยะจากขอบ */
+}
+
+/*  */
+.link-text {
+  margin-left: 20%;
+  margin-right: auto;
+   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
+   text-align: center;
+  display: flex;
+  flex-wrap: wrap;  /* ทำให้ลิงก์แสดงในหลายบรรทัดเมื่อจำเป็น */
+  gap: 30px;
+  
+}
+
+.link-text a {
+  font-size: medium;
+  padding-left: 30px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+/* การตกแต่งกล่องค้นหา */
+.search-container {
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute เพื่อให้เคลื่อนที่ได้ตามต้องการ */
+  top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
+  right: 30px; /* ขยับไปทางขวา */
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* คอนเทนเนอร์ที่มีการห่อกล่องค้นหา */
+.search-box-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+/* กล่องค้นหา */
+.search-box {
+  padding-left: 50px; /* เผื่อที่ด้านขวาสำหรับไอคอน */
+  width: 100%;
+  padding: 10px 30px 10px 15px; /* กำหนดขนาดและระยะห่างภายใน */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #D9D9D9;
+  position: relative;
+}
+
+/* ไอคอนแว่นขยายอยู่ขวาสุดในกล่อง */
+.search-icon {
+  position: absolute;
+  right: 10px; /* ขยับไอคอนไปทางขวา */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  pointer-events: none;
+}
+
+.profile-dropdown {
+  font-size: medium;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s;
+}
+
+.profile-dropdown a:hover {
+  background-color: #5736B9;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="CSS/profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="JS/profile.js"></script>
+
+  <nav>
+    <div class="nav-left">
+      <a href="#">Movies</a>
+      <a href="#">Payment</a>
+      <a href="History.html">History</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="profile-menu" class="profile-dropdown">
+    <a href="profile.html">Profile</a>
+    <a href="login.html">Logout</a>
+  </div>
+
+  <div class="header">Profile</div>
+
+  <div class="content">
+    <div class="section">
+      <div class="section-title">Personal Info <span class="edit-link">edit</span></div>
+      <div>
+        <div class="info-label">First Name</div>
+        <div class="info-value">XXXXXXXXXX</div>
+        <div class="info-label">Last Name</div>
+        <div class="info-value">XXXXXXXXXX</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Contact Infomation <span class="edit-link">edit</span></div>
+      <div>
+        <div class="info-label">Phone Number</div>
+        <div class="info-value">XXXXXXXXXX</div>
+        <div class="info-label">Email</div>
+        <div class="info-value">XXXXXXXXXX</div>
+      </div>
+    </div>
+  </div>
+
+
+</html>
+</body>

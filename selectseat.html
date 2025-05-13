@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Seat</title>
+  <link rel="stylesheet" href="CSS/selectseat.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-right">
+      <div class="avatar" onclick="toggleMenu()">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div id="profile-menu" class="profile-dropdown">
+    <a href="#">Profile</a>
+    <a href="login.html">Logout</a>
+  </div>
+
+  <div class="main-container">
+    <div class="left-section">
+      <div class="screen">SCREEN</div>
+      <div class="seats-grid" id="seats-grid"></div>
+      <div class="legend">
+        <div><span class="legend-dot normal"></span> Normal 240 THB</div>
+        <div><span class="legend-dot honeymoon"></span> Honeymoon 260 THB</div>
+        
+      </div>
+    </div>
+
+    <!-- Right: Movie Info -->
+    <div class="right">
+      <div class="movie-row">
+        <div class="movie-image">
+          <img src="image/snow-white.jpg" alt="Snow White" />
+        </div>
+
+        <div class="movie-info-text">
+          <h4>SNOW WHITE</h4>
+          <div class="lang">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>TH/--
+          </div>
+          <div class="duration">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> 106 mins
+          </div>
+        </div>
+      </div>
+
+      <h4 class="showtime-label">Showtime</h4>
+
+      <div class="theatre">
+        <p id="cinema-name">Major Cineplex Future Park Rangsit<br></p>
+        <span id="show-date" style="color: #5736B9;">29 Mar 2025</span>
+      </div>
+
+      <div class="showtime-row">
+        <span class="theatre-name">Theatre1</span>
+        <span class="showtime-time">19:00</span>
+      </div>
+
+      <div class="summary">
+        <p>SEATS: <span id="selected-seat">-</span></p>
+        <p>TOTAL PRICE: <span id="total-price">0 THB</span></p>
+      </div>
+
+      <button class="pay-btn" id="buyBtn" disabled>PAYMENT</button>
+    </div>
+  </div>
+
+  <script src="JS/selectseat.js"></script>
+</body>
+</html>

@@ -112,6 +112,7 @@ nav {
   padding: 1%;
   font-weight: bold;
   font-size: 2vw;
+  margin-top: 1vw;
 }
 
 /* Ticket Section */
@@ -168,14 +169,14 @@ nav {
 }
 
 .ticket-details .label {
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: white;
   font-weight: 500;
   margin-top: 0.5vw;
 }
 
 .ticket-details .value {
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: white;
   font-weight: 600;
   margin-bottom: 0vw;
@@ -185,6 +186,10 @@ nav {
 .ticket-cinema {
   font-weight: 600;
   color: #ffffff;
+}
+
+.copy-text{
+  margin-top: -2.5vw;
 }
 
 /* Price */

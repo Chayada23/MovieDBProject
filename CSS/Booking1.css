@@ -12,8 +12,6 @@ body {
   margin: 0;
 }
 
-
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -76,6 +74,12 @@ nav {
   color: #5736B9;
 }
 
+/* Active nav link */
+.nav-left a.active {
+  color: #5736b9;
+  
+}
+
 .profile-dropdown {
   position: absolute;
   top: 3.13vw;
@@ -112,6 +116,7 @@ nav {
   padding: 1%;
   font-weight: bold;
   font-size: 170%;
+  margin-top: 1vw;
 }
 
 .content {

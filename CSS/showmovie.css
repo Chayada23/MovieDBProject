@@ -2,146 +2,147 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #0b0b0b;
+  background: #000;
   color: white;
 }
 
-
+/* ปุ่ม logout */
 .logout-icon {
   position: absolute;
-  top: 20px; /* ห่างจากขอบบน 20px */
-  right: 20px; /* ห่างจากขอบขวา 20px */
-  font-size: 30px; /* ขนาดไอคอน */
-  color: white; /* สีของไอคอน */
-  cursor: pointer; /* แสดง cursor เป็นมือเมื่อ hover */
+  top: 1.2vw;
+  right: 1.04vw;
+  font-size: 1.56vw;
+  color: white;
+  cursor: pointer;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
 }
 
 .logout-icon:hover {
-  color: #5736B9; /* สีไอคอนเมื่อ hover */
+  color: #5736B9;
 }
 
-/*  */
-.link-text {
-  margin-left: 20%;
-  margin-right: auto;
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-   text-align: center;
-  display: flex;
-  flex-wrap: wrap;  /* ทำให้ลิงก์แสดงในหลายบรรทัดเมื่อจำเป็น */
-  gap: 30px;
-  
-}
-
-.link-text a {
-  padding-left: 30px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* การตกแต่งกล่องค้นหา */
+/* Navbar และลิงก์ */
 .navbar {
-  justify-content: space-between; /* จัดให้อีกกล่องไปทางขวา */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
   width: 100%;
-  display: flex;
-  margin-left: 20px; /* จัดตำแหน่งลิงก์และกล่องค้นหาขวา-ซ้าย */
-  align-items: center; /* ทำให้แนวตั้งตรงกัน */
-  padding: 40px 40px; /* เว้นระยะจากขอบ */
+ 
 }
 
-.link-text {
-  margin-left: 20%;
-  margin-right: auto;
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-   text-align: center;
+.nav-left {
   display: flex;
-  flex-wrap: wrap;  /* ทำให้ลิงก์แสดงในหลายบรรทัดเมื่อจำเป็น */
-  gap: 30px;
-  
+  gap: 2.6vw;
+  padding-left: 20vw;
+  margin-top: 2vw;
 }
 
-.link-text a {
-  font-size: medium;
-  padding-left: 30px;
+.nav-left a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+  font-size: 1.25vw;
 }
-/* การตกแต่งกล่องค้นหา */
+
+.nav-left a.active {
+  color: #5736B9;
+  font-weight: bold;
+  border-bottom: 0.15vw solid #5736B9;
+}
+
+/* กล่องค้นหา */
 .search-container {
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-  padding: 10px 30px;
   display: flex;
   align-items: center;
-  margin-right: 20%; /* ดันกล่องไปทางขวาสุด */
+  margin-right: 0vw;
+  margin-top: 2vw;
 }
 
 .search-box-wrapper {
   position: relative;
-  width: 300px;
-  margin-left: 100px;
+  width: 15vw;
 }
 
 .search-box {
-  margin-right: 50px; /* ขยับมาทางขวา*/
-  padding-left: 50px;
   width: 100%;
-  padding: 10px 30px 10px 15px; /* เผื่อที่ด้านขวาสำหรับไอคอน */
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  padding: 0.52vw 1.56vw;
+  border-radius: 2vw;
+  border: 0.05vw solid #ccc;
+  font-size: 0.9vw;
   background-color: #D9D9D9;
+  padding-left: 2vw;
 }
 
-/* ไอคอนแว่นขยายอยู่ขวาสุดในกล่อง */
 .search-icon {
   position: absolute;
-  right: 20px;
+  right: 1vw;
   top: 50%;
-  transform: translateY(-30%);
+  transform: translateY(-50%);
   color: #666;
-  pointer-events: none;
 }
 
+/* เมนูลิงก์หลัก */
+.link-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7vw;
+  margin-right: auto;
+  text-align: center;
+  margin-left: 25vw;
+  margin-top: 3vw;
+}
+
+.link-text a {
+  padding-left: 2vw;
+  font-size: 1.2vw;
+  color: white;
+  text-decoration: none;
+}
+
+/* แถบ Tab */
+.tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.04vw;
+  background-color: #5736B9;
+  padding: 0.5vw 1vw;
+  transform: translateY(-2vw);
+  margin-top: 1vw;
+}
+.tab {
+  margin-right: 1.5vw;
+  color: white;
+  cursor: pointer;
+  padding: 0.52vw 1.04vw;
+  font-size: 1.2vw;
+}
 .profile-dropdown {
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 3.13vw;
+  right: 1.04vw;
   background-color: #1e1e1e;
-  border: 1px solid #444;
-  border-radius: 10px;
+  border: 0.05vw solid #444;
+  border-radius: 0.52vw;
   display: none;
   flex-direction: column;
-  min-width: 150px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-width: 7.81vw;
+  box-shadow: 0 0.21vw 0.52vw rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
 .profile-dropdown a {
-  padding: 12px 16px;
+  padding: 0.625vw 0.83vw;
   color: white;
   text-decoration: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 0.05vw solid #333;
   transition: background 0.3s;
-}
-
-.profile-dropdown {
-  font-size: medium;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #1e1e1e;
-  border: 1px solid #444;
-  border-radius: 10px;
-  display: none;
-  flex-direction: column;
-  min-width: 150px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  font-size: 0.95vw;
 }
 
 .profile-dropdown a:hover {
@@ -157,125 +158,71 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 40px;
+  padding: 2.08vw; /* 40px ≈ 2.08vw */
 }
 
 .left-column,
 .center-column,
 .right-column {
   flex: 1;
-  padding: 0 20px;
+  padding: 0 1.04vw; /* 20px ≈ 1.04vw */
+}
+
+.left-column{
+  margin-left: 13vw;
+}
+
+.center-column{
+  margin-left: -10vw;
+  margin-top: 2vw;
 }
 
 .movie-poster {
   width: 100%;
-  max-width: 250px;
-  border-radius: 10px;
+  max-width: 13vw; /* 250px ≈ 13vw */
+  border-radius: 0.52vw; /* 10px ≈ 0.52vw */
 }
 
 .release-date {
   color: #a59aff;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 0.83vw; /* 16px ≈ 0.83vw */
+  margin-bottom: 0.52vw; /* 10px ≈ 0.52vw */
 }
 
 .center-column h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 1.67vw; /* 32px ≈ 1.67vw */
+  margin-bottom: 0.52vw;
 }
 
 .genre {
   color: #a59aff;
-  margin-bottom: 15px;
+  margin-bottom: 0.78vw; /* 15px ≈ 0.78vw */
 }
 
 .tags .tag {
   background-color: #2c2c2c;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-right: 10px;
+  padding: 0.31vw 0.52vw; /* 6px 10px ≈ 0.31vw 0.52vw */
+  border-radius: 0.42vw; /* 8px ≈ 0.42vw */
+  font-size: 0.73vw; /* 14px ≈ 0.73vw */
+  margin-right: 0.52vw; /* 10px ≈ 0.52vw */
   display: inline-block;
 }
 
 .showtime-btn {
-  margin-top: 20px;
+  margin-top: 1.04vw; /* 20px ≈ 1.04vw */
   background-color: #FFD563;
   color: black;
-  padding: 10px 20px;
+  padding: 0.52vw 1.04vw; /* 10px 20px ≈ 0.52vw 1.04vw */
   border: none;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px ≈ 1.04vw */
   font-weight: bold;
-  font-size: 16px;
+  font-size: 0.83vw; /* 16px ≈ 0.83vw */
   cursor: pointer;
 }
 
 .trailer-img {
   width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
+  max-width: 20.83vw; /* 400px ≈ 20.83vw */
+  border-radius: 0.52vw;
 }
 
-.navbar {
-  justify-content: space-between; /* จัดให้อีกกล่องไปทางขวา */
-  width: 100%;
-  display: flex;
-  margin-left: 20px; /* จัดตำแหน่งลิงก์และกล่องค้นหาขวา-ซ้าย */
-  align-items: center; /* ทำให้แนวตั้งตรงกัน */
-  padding: 40px 40px; /* เว้นระยะจากขอบ */
-}
-
-/*  */
-.link-text {
-  margin-left: 20%;
-  margin-right: auto;
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-   text-align: center;
-  display: flex;
-  flex-wrap: wrap;  /* ทำให้ลิงก์แสดงในหลายบรรทัดเมื่อจำเป็น */
-  gap: 30px;
-  
-}
-
-.link-text a {
-  font-size: medium;
-  padding-left: 30px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-/* การตกแต่งกล่องค้นหา */
-.search-container {
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-  margin-right: 20%; /* ดันกล่องไปทางขวาสุด */
-}
-
-.search-box-wrapper {
-  position: relative;
-  width: 300px;
-  margin-left: 100px;
-}
-
-.search-box {
-  margin-right: 50px; /* ขยับมาทางขวา*/
-  padding-left: 50px;
-  width: 100%;
-  padding: 10px 30px 10px 15px; /* เผื่อที่ด้านขวาสำหรับไอคอน */
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  background-color: #D9D9D9;
-}
-
-/* ไอคอนแว่นขยายอยู่ขวาสุดในกล่อง */
-.search-icon {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-30%);
-  color: #666;
-  pointer-events: none;
-}

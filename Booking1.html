@@ -6,33 +6,48 @@
   <title>Transaction Summary</title>
   <link rel="stylesheet" href="CSS/Booking1.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
   <script src="JS/Booking.js"></script>
-  <nav>
-    <div class="nav-left">
-      <a href="movielist.html">Movies</a>
-      <a href="#">Payment</a>
+ <!--ไอคอนรูปคน  ไอคอนล็อกเอ้าท์ -->
+
+
+<div class="logout-icon" onclick="toggleMenu()">
+  <i class="fas fa-user-circle"></i>
+
+  <div id="profile-menu" class="profile-dropdown">
+   <a href="profile.html">Profile</a>
+    <a href="login.html">Logout</a>
+</div>
+</div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="link-text">
+      <a href="#">Movies</a>
+      <a href="#" style="color: #5736B9;">Payment</a>
       <a href="#">History</a>
-    </div>
-    <div class="nav-right">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </div>
-      <div class="avatar" onclick="toggleMenu()">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+   </div>
+    
+    
+    <div class="search-container">
+      <div class="search-box-wrapper">
+        <input type="text" placeholder="Search..." class="search-box" >
+        <i class="fas fa-search search-icon"></i>
+      
       </div>
     </div>
   </nav>
+    
 
+     <!-- หมวด Now Showing / Coming Soon -->
+<div class="tab-bar">
+  <div class="tab">Transaction Summary</div>
+</div>
   <div id="profile-menu" class="profile-dropdown">
     <a href="profile.html">Profile</a>
     <a href="login.html">Logout</a>
   </div>
-
-  <div class="header">Transaction Summary</div>
 
   <div class="content">
     <div class="left">

@@ -1,245 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #0b0b0b;
-      color: white;
-    }
-   .container {
-  padding: 10px;
-  width: 90%;         /* ให้กว้างเต็มพื้นที่ที่มี */
-  max-width: 1200px;   /* หรือค่าที่คุณต้องการให้กว้างสุด */
-  margin: auto;        /* จัดตำแหน่งให้อยู่กลาง */
-}
-    .movie-info {
-      display: flex;
-      gap: 20px;
-    }
-    .poster {
-      width: 150px;
-      border-radius: 10px;
-    }
-    .details h2 {
-      margin: 5px 0;
-    }
-    
-/* สีเมื่อเลือกแล้ว */
-    .date-box {
-  padding: 15px 20px;
-  background-color: #ccc;
-  color: black;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-}
-
-/*เมื่อวันที่ วันนั้นถูกเลือก*/
-.date-box.selected {
-  background-color: #FFD563;
+  background: #000;
   color: white;
-  font-weight: bold;
-}
-    
-.showtimes {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  flex-wrap: nowrap; /* ป้องกันการย้ายบรรทัด */
-  width: fit-content;
 }
 
-.time-box {
-  padding: 15px 20px;
-  background-color: #ccc;
-  color: black;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-}
-
-
-/* ทำให้เป็นบล็อคๆ */
-    .dates, .showtimes {
-      display: flex;
-      gap: 10px;
-      margin: 20px 0;
-      gap: 40px; /* ลดระยะห่างระหว่างปุ่มหรือตัวเลือก */
-    }
-
-
-
-.time-box.selected {
-  background-color: #FFD563;
-  color: black;
-  font-weight: bold;
-}
-
-.showtimes button {
-  flex: 0 0 30%;         /* กำหนดให้แต่ละปุ่มมีความกว้าง 30% ของพื้นที่ */
-  padding: 10px 20px;
-  border: none;
-  background-color: #d9d9d9;
-  color: black;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  min-width: 80px;
-}
-
-    
-    .cinema-info {
-  background-color: #1e1e1e;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  gap: 10px; /* ปรับช่องว่างระหว่าง logo-box กับ cinema-detail */
-  align-items: flex-start; /* ให้เนื้อหาชิดด้านบน */
-}
-
-.logo-box {
-  background-color: #D9D9D9;
-  padding: 1vw;
-  border-radius: 0.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 6vw;
-  height: 6vw;
-}
-
-.cinema-logo {
-      width: 60px;
-    }
-
-.cinema-detail {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  margin: 0;           /* ลบ margin ภายใน */
-  padding: 0;          /* ลบ padding ภายใน */
-}
-
-
-    
-    .tag {
-      display: inline-block;
-      margin-right: 5px;
-      background: #333;
-      padding: 3px 6px;
-      border-radius: 5px;
-      font-size: 12px;
-    }
-
-    /*กดแล้วจะเปลี่ยนสีวันที่*/
-    .date-box.selected {
-        background-color: #FFD563;
-        font-weight: bold;
-        color: black;
-    }
-
-   .logout-icon {
+/* ปุ่ม logout */
+.logout-icon {
   position: absolute;
-  top: 20px; /* ห่างจากขอบบน 20px */
-  right: 20px; /* ห่างจากขอบขวา 20px */
-  font-size: 30px; /* ขนาดไอคอน */
-  color: white; /* สีของไอคอน */
-  cursor: pointer; /* แสดง cursor เป็นมือเมื่อ hover */
+  top: 1.2vw;
+  right: 1.04vw;
+  font-size: 1.56vw;
+  color: white;
+  cursor: pointer;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
 }
 
 .logout-icon:hover {
-  color: #5736B9; /* สีไอคอนเมื่อ hover */
+  color: #5736B9;
 }
 
-
-/*  */
+/* Navbar */
 .navbar {
-  justify-content: space-between; /* จัดให้อีกกล่องไปทางขวา */
+  display: flex;
+  justify-content: flex-end;
+  padding: 2vw;
   width: 100%;
-  display: flex;
-  margin-left: 20px; /* จัดตำแหน่งลิงก์และกล่องค้นหาขวา-ซ้าย */
-  align-items: center; /* ทำให้แนวตั้งตรงกัน */
-  padding: 40px 40px; /* เว้นระยะจากขอบ */
-}
-
-/*  */
-.link-text {
-  margin-left: 20%;
-  margin-right: auto;
-   top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-   text-align: center;
-  display: flex;
-  flex-wrap: wrap;  /* ทำให้ลิงก์แสดงในหลายบรรทัดเมื่อจำเป็น */
-  gap: 30px;
-  
-}
-
-.link-text a {
-  font-size: medium;
-  padding-left: 30px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-/* การตกแต่งกล่องค้นหา */
-.search-container {
-  position: absolute; /* ใช้ตำแหน่งแบบ absolute เพื่อให้เคลื่อนที่ได้ตามต้องการ */
-  top: 50px; /* ปรับค่านี้เพื่อให้เมนูอยู่ห่างจากไอคอน */
-  right: 30px; /* ขยับไปทางขวา */
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-}
-
-/* คอนเทนเนอร์ที่มีการห่อกล่องค้นหา */
-.search-box-wrapper {
-  position: relative;
-  width: 300px;
 }
 
 /* กล่องค้นหา */
-.search-box {
-  padding-left: 50px; /* เผื่อที่ด้านขวาสำหรับไอคอน */
-  width: 100%;
-  padding: 10px 30px 10px 15px; /* กำหนดขนาดและระยะห่างภายใน */
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  background-color: #D9D9D9;
-  position: relative;
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2vw;
 }
 
-/* ไอคอนแว่นขยายอยู่ขวาสุดในกล่อง */
+.search-box-wrapper {
+  position: relative;
+  width: 15vw;
+}
+
+.search-box {
+  width: 100%;
+  padding: 0.52vw 1.56vw;
+  border-radius: 2vw;
+  border: 0.05vw solid #ccc;
+  font-size: 0.9vw;
+  background-color: #D9D9D9;
+  padding-left: 2vw;
+}
+
 .search-icon {
   position: absolute;
-  right: 10px; /* ขยับไอคอนไปทางขวา */
+  right: 1vw;
   top: 50%;
   transform: translateY(-50%);
   color: #666;
-  pointer-events: none;
 }
 
+/* Dropdown Menu */
 .profile-dropdown {
-  font-size: medium;
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 3.13vw;
+  right: 1.04vw;
   background-color: #1e1e1e;
-  border: 1px solid #444;
-  border-radius: 10px;
+  border: 0.05vw solid #444;
+  border-radius: 0.52vw;
   display: none;
   flex-direction: column;
-  min-width: 150px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-width: 7.81vw;
+  box-shadow: 0 0.21vw 0.52vw rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
 .profile-dropdown a {
-  padding: 12px 16px;
+  padding: 0.625vw 0.83vw;
   color: white;
   text-decoration: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 0.05vw solid #333;
   transition: background 0.3s;
+  font-size: 0.95vw;
 }
 
 .profile-dropdown a:hover {
@@ -248,4 +94,138 @@ body {
 
 .profile-dropdown a:last-child {
   border-bottom: none;
+}
+
+.container {
+  padding: 0.52vw;
+  width: 90%;
+  max-width: 62.5vw;
+  margin: auto;
+  margin-top: 1vw;
+}
+
+.movie-info {
+  display: flex;
+  gap: 1.04vw;
+  margin-top: -2vw;
+}
+
+.poster {
+  width: 7.81vw;
+  border-radius: 0.52vw;
+}
+
+#today-date {
+  font-size: 1vw; /* หรือจะใช้ rem/px ก็ได้ เช่น 20px */
+  
+}
+
+
+.details h2 {
+  margin: 0.26vw 0;
+}
+
+.details p{
+  margin-top: 1vw;
+}
+
+/* วันที่ให้เลือก */
+.date-box {
+  padding: 0.78vw 1.04vw;
+  background-color: #ccc;
+  color: black;
+  border-radius: 0.52vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+.date-box.selected {
+  background-color: #FFD563;
+  color: black;
+  font-weight: bold;
+}
+
+.dates {
+  display: flex;
+  gap: 2.08vw;
+  margin: 1.04vw 0;
+}
+
+/* ปุ่มเวลา */
+.showtimes {
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+  margin-top: 0.52vw;
+  width: fit-content;
+}
+
+.time-box {
+  padding: 0.6vw 1.2vw;
+  background-color: #d9d9d9;
+  color: black;
+  border-radius: 0.52vw;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.85vw;
+  font-weight: bold;
+  border: none;
+  min-width: 4vw;
+}
+
+.time-box.selected {
+  background-color: #FFD563;
+  color: black;
+}
+
+/* Cinema Info Layout */
+.cinema-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5vw;
+  background-color: #1e1e1e;
+  padding: 1vw;
+  border-radius: 0.52vw;
+  width: 100%;
+  margin-top: 1.5vw;
+}
+
+.logo-box {
+  background-color: #D9D9D9;
+  width: 6vw;
+  height: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+  flex-shrink: 0;
+}
+
+.cinema-logo {
+  width: 3.5vw;
+  height: auto;
+}
+
+.cinema-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.52vw;
+  flex-grow: 1;
+}
+
+/* ป้าย tag */
+.tag {
+  display: inline-block;
+  margin-right: 0.5vw;
+  background: #333;
+  padding: 0.3vw 0.7vw;
+  border-radius: 0.3vw;
+  font-size: 0.75vw;
+  color: white;
+}
+
+.time-box.selected {
+  background-color: #FFD563;
+  color: black;
 }
